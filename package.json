@@ -23,6 +23,6 @@
   "typings": "./index.d.ts",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/beanify/beanify-plugin.git"
+    "url": "git+https://github.com/beanjs-framework/beanify-plugin.git"
   }
 }
