@@ -1,6 +1,6 @@
 {
   "name": "beanify-plugin",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "beanify plugin ",
   "main": "index.js",
   "scripts": {
@@ -23,6 +23,6 @@
   "typings": "./index.d.ts",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/beanjs-framework/beanify-plugin.git"
+    "url": "git+https://github.com/beanify/beanify-plugin.git"
   }
 }
