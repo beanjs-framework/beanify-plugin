@@ -1,31 +1,40 @@
 # beanify-plugin
 
-## install
+beanify-plugin is a plugin helper for Beanify.
+
+`beanify>=3.0.2`
+
+## Install
 
 ```bash
-npm install beanify-plugin 
+npm install beanify-plugin --save
 ```
 
-## usage
+with yarn
+
+```
+yarn add beanify-plugin
+```
+
+## Usage
 
 ```javascript
-const beanifyPlugin=require('beanify-plugin')
+const bp = require('beanify-plugin')
 
-let plugin =beanifyPlugin((beanify,opts,done)=>{
+module.exports = bp(function (beanify, opts, next) {
+  // your plugin code
+  next()
+}, meta)
 
-    done()
-},{
-    // prefix:string, //route prefix
-    // scoped: boolean, 
-    // name: string, //plugin name
-    // beanify:string, //beanify version
-    // dependencies:string [], 
-    // decorators:string [],
-    // options:object //default opts
-})
+// async await
 
-let isScoped=plugin[beanifyPlugin.pluginScoped]
-let meta=plugin[beanifyPlugin.pluginMeta]
-let prefix=plugin[beanifyPlugin.pluginPrefix]
-
+module.exports = bp(async function (beanify, opts) {
+  // your plugin code
+}, meta)
 ```
+
+### Metadata
+
+- **name**: when you set value, register creates a new scope.
+- **prefix**: the new scope `route` prefix.The prefix of the parent will be inherited
+- **beanify**: Used to detect the current beanify version
