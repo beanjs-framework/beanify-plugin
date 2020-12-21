@@ -9,9 +9,10 @@ module.exports = function wrapper (fn, opts = {}) {
   }
 
   const bVer = require('beanify/package.json').version
-  if (!semver.satisfies(bVer, '>=3.0.2')) {
+  const dVer = '>=3.0.4'
+  if (!semver.satisfies(bVer, dVer)) {
     throw new Error(
-      `beanify-plugin: expected '>=3.0.2' beanify version, '${bVer}' is installed`
+      `beanify-plugin: expected '${dVer}' beanify version, '${bVer}' is installed`
     )
   }
 
